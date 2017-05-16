@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'mui-icons-self';
+    font-weight: normal;
+    font-style: normal;
+    src:  url('../fonts/mui-icons-self.ttf') format('truetype'); /* iOS 4.1- */
+}
+.mui-icons-self
+{
+    font-family: 'mui-icons-self';
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+.icon-self-weizhi:before { content: "\e8ff"; }
+

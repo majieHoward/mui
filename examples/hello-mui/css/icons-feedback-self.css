@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'mui-icons-feedback-self';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/mui-icons-feedback-self.ttf?t=1494918092686') format('truetype'); /* iOS 4.1- */
+}
+.mui-icons-feedback-self{
+    font-family: 'mui-icons-feedback-self';
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.feedback-image-camera:after {
+    content: "\e601";
+}
+
+.icons-feedback-shanchu:before {
+    content: "\e61b";
+}

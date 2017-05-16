@@ -1,0 +1,526 @@
+/*!
+ * ======================================================
+ * FeedBack Template For MUI (http://dev.dcloud.net.cn/mui)
+ * =======================================================
+ * @version:1.0.0
+ * @author:cuihongbao@dcloud.io
+ */
+
+
+.feedback body {
+	background-color: #ffffff;
+}
+.feedback input,
+.feedback textarea {
+	border: none !important;
+}
+.feedback textarea {
+	height: 100px;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
+}
+.feedback .row {
+	width: 100%;
+	background-color: #fff;
+}
+.feedback p {
+	height: 45px;
+	/**padding: 10px 15px 0;**/
+}
+.menu-wrapper p{
+	height: 45px;
+}
+/*.feedback button#submit { 
+	width: 90%;
+	height: 46px;
+	left: 50%;
+	-webkit-transform: translate(-50%);
+}*/
+
+input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
+	font-size: 14px;
+}
+
+.feedback .hidden {
+	display: none;
+}
+.feedback .image-list {
+	width: 100%;
+	/**height: 85px;**/
+	background-size: cover;
+	padding: 10px 10px;
+	overflow: hidden;
+}
+.feedback .image-item {
+	width: 65px;
+	height: 65px;
+	/*background-image: url(../images/iconfont-tianjia.png);*/
+	background-size: 100% 100%;
+	display: inline-block;
+	position: relative;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #e8e8e8;
+	vertical-align: top;
+}
+
+.feedback .image-show-item {
+	width: 100%;
+	height: 200px;
+	background-size: 100% 100%;
+	display: inline-block;
+	position: relative;
+	border-radius: 5px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: solid 1px #e8e8e8;
+	vertical-align: top;
+}
+
+.feedback .image-item .file {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	cursor: pointer;
+	z-index: 0;
+}
+.feedback .image-item.space {
+	border: none;
+}
+.feedback .image-item .image-close {
+	position: absolute;
+	display: inline-block;
+	right: -6px;
+	top: -6px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 12px;
+	background-color: #FF5053;
+	color: #f3f3f3;
+	border: solid 1px #FF5053;
+	font-size: 9px;
+	font-weight: 200;
+	z-index: 1;
+}
+.feedback .image-item .image-up{
+	height: 65px;
+	width: 65px;
+	border-radius: 10px;
+	line-height: 65px;
+	border: 1px solid #ccc;
+	color: #ccc; 
+	display: inline-block;
+	text-align: center;
+}
+.feedback .image-item .image-up:after{
+	font-family: "微软雅黑";
+	content: '+';
+	font-size: 60px;
+}
+.feedback .image-item.space .image-close {
+	display: none;
+}
+.feedback .mui-inline{
+	vertical-align: bottom;
+	font-size: 16px;
+	color: #929292;
+}
+.mui-icon-star{
+	color: #B5B5B5;
+	font-size: 22px;
+}
+.mui-icon-star-filled{
+	color: #FFB400;
+	font-size: 22px;
+} 
+.mui-popover {
+	height: 180px;
+}
+.stream{
+	display: none;
+}
+.mui-plus-stream .stream{
+	display: block;
+}
+.mui-bar {
+    background-color: #ae995a;
+    color: #ffffff;
+    -webkit-box-shadow: 0 0 0px rgba(0,0,0,.85);
+    box-shadow: 0 0 0px rgba(0,0,0,.85);
+}
+.mui-bar-tab .mui-tab-item {
+    color: #ffffff;
+}
+.mui-bar-tab .mui-tab-item.mui-active {
+    color: #ffffff;
+}
+/**add by mayijie 2017.05.14**/
+.animated {
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+@-webkit-keyframes bounceInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@keyframes bounceInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 25px, 0);
+		transform: translate3d(0, 25px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 5px, 0);
+		transform: translate3d(0, 5px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+.bounce-in-down {
+	-webkit-animation-name: bounceInDown;
+	animation-name: bounceInDown;
+}
+@-webkit-keyframes fadeInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+@keyframes fadeInDown {
+	0%, 60%, 75%, 90%, 100% {
+		-webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+	}
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+	60% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	75% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	100% {
+		-webkit-transform: none;
+		transform: none;
+	}
+}
+.fade-in-down {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+@-webkit-keyframes bounceOutUp {
+	20% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	40%,
+	45% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 20px, 0);
+		transform: translate3d(0, 20px, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+@keyframes bounceOutUp {
+	20% {
+		-webkit-transform: translate3d(0, -10px, 0);
+		transform: translate3d(0, -10px, 0);
+	}
+	40%,
+	45% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 20px, 0);
+		transform: translate3d(0, 20px, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+.bounce-out-up {
+	-webkit-animation-name: bounceOutUp;
+	animation-name: bounceOutUp;
+}
+@-webkit-keyframes fadeOutUp {
+	20% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	40%,
+	45% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+@keyframes fadeOutUp {
+	20% {
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	40%,
+	45% {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0px, 0);
+		transform: translate3d(0, 0px, 0);
+	}
+	100% {
+		opacity: 0;
+		-webkit-transform: translate3d(0, -100%, 0);
+		transform: translate3d(0, -100%, 0);
+	}
+}
+.fade-out-up {
+	-webkit-animation-name: fadeOutUp;
+	animation-name: fadeOutUp;
+}
+.menu-open {
+	height: 100%;
+	width: 100%;
+}
+.menu-open .mui-scroll-wrapper {
+	position: absolute;
+	top: 48;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+	width: 100%;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+}
+.menu-backdrop {
+	display: none;
+}
+.menu-open .menu-backdrop {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,.6);
+	display: block;
+	z-index: 998;
+}
+.menu-wrapper {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	text-align: center;
+	background-color: #333;
+	width: 100%;
+}
+.menu-wrapper.hidden {
+	-webkit-transform: translate3d(0, -100%, 0);
+	transform: translate3d(0, -100%, 0);
+	z-index: -1;
+}
+.menu {
+	width: 100%;
+	padding-top: 45px;
+}
+.menu textarea{
+	color:#000000;
+	font-size: 18px;
+}
+.self-sayinput-header{
+	height: 45px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.menu .mui-table-view-inverted {
+	color: gray;
+	font-size: 19px;
+}
+.menu .mui-table-view-inverted .mui-table-view-cell:after {
+	height: 2px;
+	left: 0;
+	right: 0;
+}
+.menu-wrapper.mui-active,
+.menu-wrapper.mui-active .menu {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+
+.mui-table-view-cell>a:not(.mui-btn) {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0px 0px;
+    padding: inherit;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: inherit;
+}
+
+.popover-table-view-cell>a:not(.mui-btn){
+	margin: -11px -15px;
+}
+
+.self-pull-left {
+
+    padding-left: 10px;
+    float: left;
+    color: #ffffff;
+}
+
+.self-pull-right{
+	padding-right: 10px;
+ 	float: right;
+ 	color: #ae995a;
+}
+
+.self-input-togger{
+	font-weight: normal;
+    font-size: 17px;
+   line-height: 44px;
+    background-color: transparent;
+    
+        top: 1px;
+}
+.selfShowSayDescribe textarea{
+	color:#000000;
+	font-size: 20px;
+}
+
+.self-locked-say{
+	color: #929292;
+}
+
+.self-locked-say-active{
+	color: #000000;
+}
+
+.mui-progressbar {
+    height: 50px;
+    background: #ffffff; 
+}
+
+.mui-progressbar.mui-progressbar-infinite:before {
+    background: #ae995a;
+}
+
+.feedback .image-item .feedback-image-camera:after {
+  
+    font-size: 30px;
+}
+
+.feedback .image-item .feedback-image-camera {
+    height: 65px;
+    width: 65px;
+    border-radius: 10px;
+    line-height: 65px;
+    border: 1px solid #929292;
+    color: #929292;
+    display: inline-block;
+    text-align: center;
+}
+a:active {
+    color: #000000;
+}
+
+.mui-icon .mui-badge-control {
+    font-size: 50px;
+    line-height: 1.4;
+    position: absolute;
+    top: -2px;
+    right: 0%;
+    margin-left: -10px;
+    padding: 1px 5px;
+    color: #fff;
+    background-color: rgba(251, 0, 0, 0.3);
+}

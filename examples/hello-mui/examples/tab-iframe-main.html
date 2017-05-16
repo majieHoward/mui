@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>校yuan记</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<style>
+			html,
+			body {
+				background-color: #eeeeee;
+			}
+			.mui-off-canvas-right {
+				width: 100%;
+				background: #f6f6f6;
+			}
+			.mui-bar {
+			    
+			    background-color: #f6f6f6;
+			    border-bottom: 1px solid #d1d1d1;
+			    
+			}
+			.mui-table-view {
+			    
+			    background-color: #eeeeee;
+			}
+			.mui-bar-tab{
+				background-color: #f9f9f9;
+				border-top: 1px solid #d1d1d1;
+			}
+			.mui-bar-tab .mui-tab-item.mui-active {
+			    color: #000000;
+			}
+			.mui-bar-tab .mui-tab-item {
+			    
+			    color: #a3a3a3;
+			}
+			.self-mui-action-back{
+				color: #000000;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable">
+		    <aside id="offCanvasSide" class="mui-off-canvas-right">
+		        <header class="mui-bar mui-bar-nav">
+					<h1 id="openDetailPagerHeader" class="mui-title">header</h1>
+				</header>
+				<div class="content openDetailPager" id="openDetailPager">
+					
+				</div>	
+			</aside>
+		    <div class="mui-inner-wrap">
+				<header class="mui-bar mui-bar-nav" id="tabIframeMainHeader" name="tabIframeMainHeader">
+					<a class=" mui-icon mui-icon-left-nav mui-pull-left self-mui-action-back" style="display: none;" name="showSelfMuiActionBack" id="showSelfMuiActionBack"></a>
+					<h1 id="title" class="mui-title">首页</h1>
+				</header>
+				<nav class="mui-bar mui-bar-tab" id="tabIframeMainNav" name="tabIframeMainNav">
+					<a class="mui-tab-item mui-active" container="about" id="aboutMenuItem" name="aboutMenuItem">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label" selfHeaderShowValue="首页">首页</span>
+					</a>
+					<a class="mui-tab-item" container="chat" id="chatMenuItem" name="chatMenuItem">
+						<span class="mui-icon mui-icon-email"></span>
+						<span class="mui-tab-label" selfHeaderShowValue="校yuan记">校园</span>
+					</a>
+					<a class="mui-tab-item" container="contact" id="contactMenuItem" name="contactMenuItem">
+						<span class="mui-icon mui-icon-camera"></span>
+						<span class="mui-tab-label" selfHeaderShowValue="马上就OK...">闪记</span>
+					</a>
+					<a class="mui-tab-item" container="setting" id="settingMenuItem" name="settingMenuItem">
+						<span class="mui-icon mui-icon-gear"></span>
+						<span class="mui-tab-label" selfHeaderShowValue="设置">设置</span>
+					</a>
+				</nav>
+				<!--切换子页面start-->
+				<div class="mui-content child-content-self about" id="about" style="display:none;"></div>
+				<div class="mui-content child-content-self chat" id="chat" style="display:none;"></div>
+				<div class="mui-content child-content-self contact" id="contact" style="display:none;"></div>
+				<div class="mui-content child-content-self setting" id="setting" style="display:none;"></div>
+				<div class="mui-content child-content-self photocontrol" id="photocontrol" style="display:none;"></div>
+				<!--切换子页面end-->
+			</div>
+			<!-- off-canvas backdrop -->
+			<div class="mui-off-canvas-backdrop"></div>
+		</div>
+	</body>
+	<script src="../js/mui.min.js"></script>
+	<script type="text/javascript" src="../js/tab.iframe.main.js" charset="utf-8"></script>
+</html>

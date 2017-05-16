@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html lang="en" class="feedback">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>问题反馈</title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/photoControl.css" />
+	</head>
+
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-icon mui-icon-left-nav mui-pull-left self-mui-action-back" id="gotobackFeedback" name="gotobackFeedback"></a>
+		<button id="completeFeedback" name="completeFeedback" class="mui-btn mui-btn-blue mui-btn-link mui-pull-right">继续</button>
+		<h1 class="mui-title">预览</h1>
+	</header>	
+	<div class="mui-content">
+		<div class="upload-container" id="upload-container" name="upload-container">	
+        </div>           	
+        <nav class="mui-bar mui-bar-tab">
+    		<div class=" mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+                <div class="mui-scroll">
+                    <a class="mui-control-item">反色</a>
+                    <a class="mui-control-item">黑白</a>
+                    <a class="mui-control-item">浮雕</a>
+                    <a class="mui-control-item">墨镜</a>
+                    <a class="mui-control-item">灰度</a>
+                    <a class="mui-control-item">怀旧</a>
+                    <a class="mui-control-item">连环画</a>
+                    <a class="mui-control-item">熔铸</a>
+                    <a class="mui-control-item">冰冻</a>
+                    <a class="mui-control-item">模糊</a>
+                    <a class="mui-control-item">减淡</a>
+                    <a class="mui-control-item">马赛克</a>
+                    <a class="mui-control-item">曝光</a>
+                    <a class="mui-control-item">铅笔画</a>
+                    <a class="mui-control-item">木雕</a>
+                    <a class="mui-control-item">柔化</a>
+                    <a class="mui-control-item">素描</a>
+                    <a class="mui-control-item">锐化</a>
+                </div>
+            </div>
+    	</nav>
+     </div>
+</body>
+<script type="text/javascript">
+window.onerror = function (errMsg, scriptURI, lineNumber, columnNumber, errorObj) {
+    setTimeout(function () {
+        var rst = {
+            "错误信息：": errMsg,
+            "出错文件：": scriptURI,
+            "出错行号：": lineNumber,
+            "出错列号：": columnNumber,
+            "错误详情：": errorObj
+        };
+
+        alert('出错了，下一步将显示错误信息');
+        alert(JSON.stringify(rst, null, 10));
+    });
+};
+</script>
+<script src="../js/mui.min.js"></script>
+<script src='../js/gifshot.js'></script>
+<script type="text/javascript" src="../js/photoControl.js"></script>
+</html>

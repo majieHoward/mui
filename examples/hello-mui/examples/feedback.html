@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en" class="feedback">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/mui.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons-feedback-self.css" />
+		<link rel="stylesheet" type="text/css" href="../css/icons-extra.css" />
+        <link rel="stylesheet" type="text/css" href="../css/icons-extra-self.css" />
+
+		<link rel="stylesheet" type="text/css" href="../css/feedback.css" />
+	</head>
+
+	<body>
+		<div class="mui-content" id="tab-feedback-content" name="tab-feedback-content">
+		    <!--添加照片-->
+			<div id="image-list" class="row image-list">
+			   
+				<div class="image-item space" style="display: none;">
+					<div class="mui-icons-feedback-self feedback-image-camera">
+						<div class="upload-container" id="upload-container" name="upload-container">	
+				        	<input accept="image/*" type="file" class="file" multiple="multiple"/>
+				        </div>
+			        </div>
+		        </div>
+		        
+		        <div class="image-show-item mui-icon">
+		        	<span class="mui-badge-control mui-icons-feedback-self icons-feedback-shanchu"></span>
+					<img src="http://127.0.0.1:8080/mui/examples/hello-mui/images/1.jpg?version=867.1214614442615" style="width: 100%;height: 200px;">
+		        </div>
+	        </div>
+	        <div class="upload-container" id="upload-container" name="upload-container">
+	        	
+        	</div>  
+			<div class="mui-content-padded">
+				<a class="mui-pull-right mui-inline" href="#popover">
+					快捷输入
+					<span class="mui-icon mui-icon-arrowdown"></span>
+				</a>
+				<!--快捷输入具体内容，开发者可自己替换常用语-->
+				<div id="popover" class="mui-popover">
+					<div class="mui-popover-arrow"></div>
+					<div class="mui-scroll-wrapper">
+						<div class="mui-scroll">
+							<ul class="mui-table-view">
+								<!--仅流应用环境下显示-->
+								<li class="mui-table-view-cell popover-table-view-cell"><a href="#">漂亮的要死</a></li>
+								<li class="mui-table-view-cell popover-table-view-cell"><a href="#">永远年轻,永远热泪盈眶</a></li>
+								<li class="mui-table-view-cell popover-table-view-cell"><a href="#">这是我一点不成熟的意见</a></li>
+								<li class="mui-table-view-cell popover-table-view-cell"><a href="#">人生总有几次踩到大便的时候</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<div id="showSayDescribe" name="showSayDescribe" class="selfShowSayDescribe">
+				
+				<textarea id="showSayDescribeValue" name="showSayDescribeValue"  readonly="readonly" rows="8" placeholder="说点啥..."></textarea>
+			</div>
+
+	        <ul class="mui-table-view">
+	            
+				<li class="mui-table-view-cell" >
+					<a class="mui-navigate-right" id="selfLocationValue" name="selfLocationValue">
+						<span class="mui-icons-self icon-self-weizhi"></span>
+						成都
+					</a>
+					
+				</li>
+				
+				<li class="mui-table-view-cell self-locked-say" id="selfSeeContent" name="selfSeeContent"><a class="" >
+						<span class="mui-icon mui-icon-locked"></span>
+						仅自己可见</a></li>
+			</ul>
+			<nav class="mui-bar mui-bar-tab" id="publishMessageBar" name="publishMessageBar">
+				<a class="mui-tab-item" id="publishMessage" name="publishMessage">
+					<span class="mui-tab-label">发布</span>
+				</a>
+			</nav>
+	    </div>
+
+	    <div id="menu-wrapper" class="menu-wrapper hidden">
+	    	<div id="sayInputContainer" name="sayInputContainer" class="self-sayinput-header">
+	    		
+	    		<span class="self-input-togger self-pull-left">
+	    		剩余<span id="countFontNumber" name="countFontNumber">140</span>个字</span>
+	    		<a class="self-input-togger self-pull-right" id="completeSayInput" name="completeSayInput" >完成</a>
+	    	</div>  
+			<div id="sayDescribe" name="sayDescribe" class="menu">
+				<textarea style="height: auto;" autofocus id="textareaOfDescribe" name="textareaOfDescribe" rows="8" placeholder="说点啥..."></textarea>
+				<p></p> 
+			</div>
+			
+		</div>
+		<!-- off-canvas backdrop -->
+		<div id="menu-backdrop" class="menu-backdrop"></div>
+	</body>
+<script type="text/javascript">
+    /**全局错误提示**/
+	window.onerror = function (errMsg, scriptURI, lineNumber, columnNumber, errorObj) {
+	    setTimeout(function () {
+	        var rst = {
+	            "错误信息：": errMsg,
+	            "出错文件：": scriptURI,
+	            "出错行号：": lineNumber,
+	            "出错列号：": columnNumber,
+	            "错误详情：": errorObj
+	        };
+	        alert('出错了，下一步将显示错误信息');
+	        alert(JSON.stringify(rst, null, 10));
+	    });
+	};
+</script>
+<script src="../js/mui.min.js"></script>
+<script src="../localResizeIMG/dist/lrz.bundle.js?v=7687367"></script>
+<script type="text/javascript" src="../js/tab.feedback.js"></script>
+</html>
