@@ -86,6 +86,14 @@ var afteractiveTabTitle;
 var title = document.getElementById("title");
 var subpage;
 var subpagescontent;
+/**初始化展示页面**/
+var initDisplayPage=function(){
+	activeTab="chat";
+	activeTabTitle="校yuan记";
+	activationPager("chat","校yuan记");
+}
+
+
 for(var i=0;i<subpages.length;i++){
 	subpage=subpages[i];
 	subpagescontent=subpagescontents[i];
@@ -123,11 +131,22 @@ var activationPager=function(container,titleValue){
 	////更改当前活跃的选项卡  
 	activeTab=container;
     activeTabTitle=titleValue;
-	document.getElementById(container+"IFrame").contentWindow.subPageProcessing();
+    var contentWindowEntity=document.getElementById(container+"IFrame").contentWindow;
+	contentWindowEntity.subPageProcessing;
+	try {
+        if(typeof contentWindowEntity.subPageProcessing === "function") { //是函数    其中 FunName 为函数名称
+            contentWindowEntity.subPageProcessing();
+            console.log("是函数");
+        } else { //不是函数
+            console.log("不是函数");
+        }
+    } catch(e) {
+
+    }
 	document.getElementById(container).style.display="block";
 
 }
-
+initDisplayPage();
 // 底部菜单切换现实事件处理
 mui('.mui-bar-tab').on('tap', 'a', function(e) {
 	var container=this.getAttribute('container');
@@ -233,3 +252,4 @@ var photocontrolPager=function(imgSource){
 	controlDisplayHeaderAndNav("tabIframeMainNav","none");
 	document.getElementById("photocontrol").style.display="block"; 
 }
+
