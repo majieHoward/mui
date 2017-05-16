@@ -514,10 +514,22 @@ a:active {
 }
 
 .mui-icon .mui-badge-control {
-    font-size: 50px;
+    font-size: 20px;
     line-height: 1.4;
     position: absolute;
     top: -2px;
+    right: 0%;
+    margin-left: -10px;
+    padding: 1px 5px;
+    color: #fff;
+    background-color: rgba(251, 0, 0, 0.3);
+}
+
+.mui-icon .mui-badge-edit-picture {
+    font-size: 20px;
+    line-height: 1.4;
+    position: absolute;
+    bottom: -2px;
     right: 0%;
     margin-left: -10px;
     padding: 1px 5px;
