@@ -7,13 +7,16 @@ mui('.mui-scroll').on('tap','.mui-control-item:not(.mui-active)',function(){
     
 });
 var loadPhotoControlImg=function(imgSoucre){
-    var img = new Image(),
+    /**var img = new Image(),
     div = document.createElement('div');
     div.appendChild(img);
+    img.id="processedPicture";
+    img.name="processedPicture";
     img.onload = function () {
         document.querySelector('#upload-container').appendChild(div);
     };     
-    img.src = imgSoucre;
+    img.src = imgSoucre;**/
+    document.getElementById("processedPicture").src=imgSoucre;
 }
 var subPageProcessing=function(){
 
@@ -30,6 +33,7 @@ gotobackFeedback.addEventListener('tap',function(){
 var completeFeedback=document.getElementById("completeFeedback");
 completeFeedback.addEventListener('tap',function(){
     document.getElementById("upload-container").innerHTML="";
-    window.parent.switchToFeedback();
+    console.log(document.getElementById("processedPicture"));
+    window.parent.switchToFeedback(document.getElementById("processedPicture").getAttribute("src"));
 });
 

@@ -6,6 +6,10 @@ mui('.mui-scroll-wrapper').scroll({
 mui('.mui-scroll').on('tap','.mui-control-item:not(.mui-active)',function(){
     
 }); 
+var takeAPictureElement=document.getElementById("takeAPictureElement");
+var showAPictureElement=document.getElementById("showAPictureElement");
+var imageShowDeleteItem=document.getElementById("imageShowDeleteItem");
+var imageShowEditItem=document.getElementById("imageShowEditItem");
 /**拍照或者选择图片**/
 document.querySelector('input').addEventListener('change', function () {
     var that = this;
@@ -82,7 +86,6 @@ var maxSayDescribelen = 140;
 var textareaOfDescribe=document.getElementById("textareaOfDescribe");
 var showSayDescribeValue=document.getElementById("showSayDescribeValue");
 var completeSayInput=document.getElementById("completeSayInput");
-console.log(completeSayInput);
 var synchronousSaydata=function(){
 	//同步数据
 	if(textareaOfDescribe.value.length==0){
@@ -125,9 +128,8 @@ mui-table-view-cell self-locked-say
 mui-table-view-cell self-locked-say-active
 **/
 var selfSeeContentClassList = selfSeeContent.classList;
+
 var controlSelfSeeContent=function(){
-	console.log(selfSeeContent);
-	console.log(selfSeeContentClassList);
 	if (selfSeeContentClassList.contains('self-locked-say-active')) {
 		/**当前为激活状态改为非激活状态**/
 		
@@ -190,3 +192,20 @@ var publishItemMessage=function(){
 
 publishMessage.addEventListener('tap',publishItemMessage);
 
+var swithToShowImage=function(imgSource){
+	document.getElementById("showImageEntity").src=imgSource;
+	takeAPictureElement.style.display="none";
+	showAPictureElement.style.display="block";
+}
+
+/**删除当前图片重新拍摄或者选择图片**/
+imageShowDeleteItem.addEventListener('tap',function(){
+	takeAPictureElement.style.display="block";
+	showAPictureElement.style.display="none";
+});
+var imageShowEditItem=document.getElementById("imageShowEditItem");
+/**重新编辑当前图片**/
+imageShowEditItem.addEventListener('tap',function(){
+    /**重新调用photoControl.html页面**/
+
+});

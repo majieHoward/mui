@@ -229,13 +229,14 @@ showSelfMuiActionBackElement.addEventListener('tap',function(){
 
 
 /**photoControl**/
-var switchToFeedback=function(){
+var switchToFeedback=function(imgSource){
 	var all=document.getElementsByClassName("child-content-self");
 	for(var i=0;i<all.length;i++){
 		all[i].style.display="none";
 	}
 	//
 	controlDisplayHeaderAndNav("tabIframeMainHeader","block");
+	document.getElementById("contactIFrame").contentWindow.swithToShowImage(imgSource);
     document.getElementById("contact").style.display="block";
 }
 
