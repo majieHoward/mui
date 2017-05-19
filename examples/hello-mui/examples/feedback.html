@@ -15,25 +15,25 @@
 		<div class="mui-content" id="tab-feedback-content" name="tab-feedback-content">
 		    <!--添加照片-->
 			<div id="image-list" class="row image-list">
-			   
+
 				<div class="image-item space" id="takeAPictureElement" name="takeAPictureElement">
 					<div class="mui-icons-feedback-self feedback-image-camera">
-						<div class="upload-container" id="upload-container" name="upload-container">	
+						<div class="upload-container" id="upload-container" name="upload-container">
 				        	<input accept="image/*" type="file" class="file" multiple="multiple"/>
 				        </div>
 			        </div>
 		        </div>
-		        
+
 		        <div class="image-show-item mui-icon"  id="showAPictureElement" name="showAPictureElement" style="display: none;">
 		        	<span class="mui-badge-control mui-icons-feedback-self icons-feedback-shanchu" id="imageShowDeleteItem" name="imageShowDeleteItem"></span>
-		        	<span class="mui-badge-edit-picture mui-icons-feedback-self 
+		        	<span class="mui-badge-edit-picture mui-icons-feedback-self
 		        	icon-feedback-o5" id="imageShowEditItem" name="imageShowEditItem"></span>
 					<img id="showImageEntity" style="width: 100%;height: 200px;">
 		        </div>
 	        </div>
 	        <div class="upload-container" id="upload-container" name="upload-container">
-	        	
-        	</div>  
+
+        	</div>
 			<div class="mui-content-padded">
 				<a class="mui-pull-right mui-inline" href="#popover">
 					快捷输入
@@ -57,20 +57,20 @@
 				</div>
 			</div>
 			<div id="showSayDescribe" name="showSayDescribe" class="selfShowSayDescribe">
-				
+
 				<textarea id="showSayDescribeValue" name="showSayDescribeValue"  readonly="readonly" rows="8" placeholder="说点啥..."></textarea>
 			</div>
 
 	        <ul class="mui-table-view">
-	            
-				<li class="mui-table-view-cell" >
-					<a class="mui-navigate-right" id="selfLocationValue" name="selfLocationValue">
-						<span class="mui-icons-self icon-self-weizhi"></span>
-						成都
-					</a>
-					
-				</li>
-				
+
+						<li class="mui-table-view-cell" >
+							<a class="mui-navigate-right" id="selfLocationValue" name="selfLocationValue">
+								<span class="mui-icons-self icon-self-weizhi"  id="selfLocationValueInner"></span>
+								成都
+							</a>
+
+						</li>
+
 				<li class="mui-table-view-cell self-locked-say" id="selfSeeContent" name="selfSeeContent"><a class="" >
 						<span class="mui-icon mui-icon-locked"></span>
 						仅自己可见</a></li>
@@ -84,16 +84,16 @@
 
 	    <div id="menu-wrapper" class="menu-wrapper hidden">
 	    	<div id="sayInputContainer" name="sayInputContainer" class="self-sayinput-header">
-	    		
+
 	    		<span class="self-input-togger self-pull-left">
 	    		剩余<span id="countFontNumber" name="countFontNumber">140</span>个字</span>
 	    		<a class="self-input-togger self-pull-right" id="completeSayInput" name="completeSayInput" >完成</a>
-	    	</div>  
+	    	</div>
 			<div id="sayDescribe" name="sayDescribe" class="menu">
 				<textarea style="height: auto;" autofocus id="textareaOfDescribe" name="textareaOfDescribe" rows="8" placeholder="说点啥..."></textarea>
-				<p></p> 
+				<p></p>
 			</div>
-			
+
 		</div>
 		<!-- off-canvas backdrop -->
 		<div id="menu-backdrop" class="menu-backdrop"></div>
@@ -117,4 +117,7 @@
 <script src="../js/mui.min.js"></script>
 <script src="../localResizeIMG/dist/lrz.bundle.js?v=7687367"></script>
 <script type="text/javascript" src="../js/tab.feedback.js"></script>
+<script type="text/javascript" src="../js/getLocation.js"></script>
+<script src="http://api.map.baidu.com/api?ak=pNtHNsrN8sNKbOFsFrWLk7g4YL5GWslX&v=2.0&services=false"></script>
+<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
 </html>
